@@ -10,8 +10,8 @@
 
 var taskInput=document.getElementById("new-task");//Add a new task.
 var addButton=document.getElementsByClassName("btn")[0];//first button
-var incompleteTaskHolder=document.getElementById("incomplete-tasks");//ul of #incompleteTasks
-var completedTasksHolder=document.getElementById("completed-tasks");//completed-tasks
+var incompleteTaskHolder=document.querySelector(".incomplete-tasks");//ul of #incompleteTasks
+var completedTasksHolder=document.querySelector(".completed-tasks");//completed-tasks
 
 
 //New task list item
@@ -33,7 +33,7 @@ var createNewTaskElement=function(taskString){
     var deleteButtonImg=document.createElement("img");//delete button image
 
     label.innerText=taskString;
-    label.className='label task';
+    label.className='label completed-label task';
     listItem.className = "list__item";
 
     //Each elements, needs appending
